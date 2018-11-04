@@ -12,7 +12,6 @@ class Character {
   public:
   Character();
   virtual ~Character() {};
-  ///TODO: Decide paramters for attack/defend
   virtual int attack() = 0;
   virtual int defend(int hitPts) = 0;
 

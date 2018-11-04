@@ -2,7 +2,11 @@
 ** Program name: Project 3
 ** Author: Jordan Hamilton
 ** Date: 11/4/2018
-** Description: This fantasy fighter game
+** Description: This fantasy fighter game prompts the user to select two fighters from the
+** following possible choices: Barbarian, Blue Men, Harry Potter, Medusa, and Vampire. Once
+** selected, the characters are initialized with their unique attributes and a random character
+** randomly attacks the other character. The fight continues, displaying results until one
+** Character's strength is depleted.
 ***********************************************************************************************/
 
 #include "Menu.hpp"

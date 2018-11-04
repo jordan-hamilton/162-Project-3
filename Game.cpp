@@ -40,6 +40,15 @@ Game::~Game() {
 }
 
 
+/***********************************************************************************************
+** Description: Takes two pointers to Character objects, then initializes a random generator
+** seed and sets the random generator seed for any random events in the game. The strength
+** of each character is stored in temporary variables, then either character1 or character2
+** attacks first, depending on the return value of the firstStrike method. Fighter information
+** and fight results are displayed with displayType, displayRoll and displayDamage methods.
+** The most recent attacker is stored in the lastAttacker variable, then a while loop repeats,
+** continues the fight, alternating attackers until one Character's strength is depleted.
+***********************************************************************************************/
 void Game::fight(Character* character1, Character* character2) {
 
   unsigned seed = time(0);
