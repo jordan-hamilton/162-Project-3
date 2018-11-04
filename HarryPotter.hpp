@@ -15,9 +15,6 @@ class HarryPotter : public Character {
   private:
 
 
-  protected:
-
-
 };
 
 #endif

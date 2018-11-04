@@ -15,9 +15,6 @@ class Medusa : public Character {
   private:
 
 
-  protected:
-
-
 };
 
 #endif

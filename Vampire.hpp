@@ -15,9 +15,6 @@ class Vampire : public Character {
   private:
 
 
-  protected:
-
-
 };
 
 #endif

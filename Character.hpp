@@ -11,24 +11,30 @@ class Character {
 
   public:
   Character();
-  Character(int attack, int defense, int armor, int strength, std::string description);
   virtual ~Character();
-  virtual int attack(Character &enemy) = 0;
-  virtual int defend() = 0;
+  ///TODO: Decide paramters for attack/defend
+  virtual int attack() = 0;
+  virtual int defend(int hitPts) = 0;
+
   int rollDie(int numSides, int numDice);
+
   int getAttackPts();
   int getDefensePts();
   int getArmorPts();
   int getStrengthPts();
-  int getNumDice();
-  int getNumSides();
+  int getNumAttackDice();
+  int getNumAttackDieSides();
+  int getNumDefenseDice();
+  int getNumDefenseDieSides();
   std::string getCharacteristics();
-  void setAttactPts(int attack);
+  void setAttackPts(int attack);
   void setDefensePts(int defense);
   void setArmorPts(int armor);
   void setStrengthPts(int strength);
-  void setNumDice(int dice);
-  void setNumSides(int sides);
+  void setNumAttackDice(int dice);
+  void setNumAttackDieSides(int sides);
+  void setNumDefenseDice(int dice);
+  void setNumDefenseDieSides(int sides);
   void setCharacteristics(std::string description);
 
 
@@ -36,7 +42,8 @@ class Character {
 
 
   protected:
-    int attackPts, defensePts, armorPts, strengthPts, numDice, numSides;
+    int attackPts, defensePts, armorPts, strengthPts, numAttackDice,
+    numAttackSides, numDefenseDice, numDefenseSides;
     std::string characteristics;
 
 };

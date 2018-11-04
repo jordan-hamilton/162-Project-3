@@ -15,9 +15,6 @@ class BlueMen : public Character {
   private:
 
 
-  protected:
-
-
 };
 
 #endif

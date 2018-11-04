@@ -1,21 +1,17 @@
 #include "Character.hpp"
 
 Character::Character() {
+
   attackPts = -1;
   defensePts = -1;
   armorPts = -1;
   strengthPts = -1;
+  numAttackDice = -1;
+  numAttackSides = -1;
+  numDefenseDice = -1;
+  numDefenseSides = -1;
   characteristics = "";
 
-}
-
-
-Character::Character(int attack, int defense, int armor, int strength, std::string description) {
-  attackPts = attack;
-  defensePts = defense;
-  armorPts = armor;
-  strengthPts = strength;
-  characteristics = description;
 }
 
 
@@ -24,7 +20,7 @@ Character::~Character() {
 }
 
 
-int Character::rollDie(int numSides, int numDice) {
+int Character::rollDie(int numDice, int numSides) {
 
   int result = 0;
 
@@ -57,13 +53,23 @@ int Character::getStrengthPts() {
 }
 
 
-int Character::getNumDice() {
-  return numDice;
+int Character::getNumAttackDice() {
+  return numAttackDice;
 }
 
 
-int Character::getNumSides() {
-  return numSides;
+int Character::getNumAttackDieSides() {
+  return numAttackSides;
+}
+
+
+int Character::getNumDefenseDice() {
+  return numDefenseDice;
+}
+
+
+int Character::getNumDefenseDieSides() {
+  return numDefenseSides;
 }
 
 
@@ -92,14 +98,25 @@ void Character::setStrengthPts(int strength) {
 }
 
 
-void Character::setNumDice(int dice) {
-  numDice = dice;
+void Character::setNumAttackDice(int dice) {
+  numAttackDice = dice;
 }
 
 
-void Character::setNumSides(int sides) {
-  numSides = sides;
+void Character::setNumAttackDieSides(int sides) {
+  numAttackSides = sides;
 }
+
+
+void Character::setNumDefenseDice(int dice) {
+  numDefenseDice = dice;
+}
+
+
+void Character::setNumDefenseDieSides(int sides) {
+  numDefenseSides = sides;
+}
+
 
 void Character::setCharacteristics(std::string description) {
   characteristics = description;
