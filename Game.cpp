@@ -181,9 +181,9 @@ void Game::displayDamage(Character *character, const int &characterNumber, const
 ***********************************************************************************************/
 void Game::displayRoll(Character *character, const bool &isAttacker) {
   if (isAttacker) {
-    cout << "Attacker rolls a " << character->getAttackPts() << endl;
+    cout << "Attacker hit points are " << character->getAttackPts() << endl;
   } else {
-    cout << "Defender rolls a " << character->getDefensePts() << endl;
+    cout << "Defender defense points are " << character->getDefensePts() << endl;
 
   }
 
