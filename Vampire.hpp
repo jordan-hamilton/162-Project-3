@@ -10,6 +10,19 @@
 class Vampire : public Character {
 
   public:
+    Vampire() : Character() {
+      setArmorPts(1);
+      setStrengthPts(18);
+      setNumAttackDice(1);
+      setNumAttackDieSides(12);
+      setNumDefenseDice(1);
+      setNumDefenseDieSides(6);
+      setCharacteristics("Suave, debonair, but vicious and surprisingly \
+        resilient");
+  }
+
+  int attack() override;
+  int defend(int hitPts) override;
 
 
   private:

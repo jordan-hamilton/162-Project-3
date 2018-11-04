@@ -2,8 +2,8 @@
 
 Character::Character() {
 
-  attackPts = -1;
-  defensePts = -1;
+  attackPts = 0;
+  defensePts = 0;
   armorPts = -1;
   strengthPts = -1;
   numAttackDice = -1;
