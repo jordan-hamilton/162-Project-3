@@ -5,17 +5,26 @@
 using std::cout;
 using std::endl;
 
+
 Game::Game() {
 
 }
 
 
+/***********************************************************************************************
+** Description: Overloaded constructor that takes two integers, then calls the setFighter
+** function twice to allocate memory for Character objects that will be used in the game.
+***********************************************************************************************/
 Game::Game(int character1, int character2) {
   setFighter(1, character1);
   setFighter(2, character2);
   fight(fighter1, fighter2);
 }
 
+
+/***********************************************************************************************
+** Description: Destructor that deletes pointers to Character objects.
+***********************************************************************************************/
 Game::~Game() {
 
   if (fighter1) {
@@ -113,11 +122,24 @@ void Game::fight(Character* character1, Character* character2) {
 }
 
 
+/***********************************************************************************************
+** Description: Randomly returns an integer between 1 and 2 to indicate who should attack first
+** during the fight (fighter 1 or fighter 2).
+***********************************************************************************************/
 int Game::firstStrike() {
   return rand() % 2 + 1;
 }
 
 
+/***********************************************************************************************
+** Description: After an attack and defense call, this function takes a pointer to a
+** Character, a constant reference to an integer for the fighter number (1 or 2), and a constant
+** reference to a boolean to indicate if the character was attacking or defending during the
+** encounter. It then outputs the necessary information on the character to the screen using
+** public methods in the object and depending on whether the character was attacking or
+** defending. If the character's strength was depleted during the encounter, a message outputs
+** that the fighter died and that the other fighter won.
+***********************************************************************************************/
 void Game::displayDamage(Character *character, const int &characterNumber, const int &originalStrength) {
 
   if (character->getStrengthPts() <= 0) {
@@ -143,8 +165,12 @@ void Game::displayDamage(Character *character, const int &characterNumber, const
 }
 
 
+/***********************************************************************************************
+** Description: Following an attack and defense, this function takes a pointer to a
+** Character and a constant reference to a boolean, then outputs the result of a dice roll to
+** the screen using the getAttackPts or getDefensePts method as appropriate.
+***********************************************************************************************/
 void Game::displayRoll(Character *character, const bool &isAttacker) {
-
   if (isAttacker) {
     cout << "Attacker rolls a " << character->getAttackPts() << endl;
   } else {
@@ -155,6 +181,14 @@ void Game::displayRoll(Character *character, const bool &isAttacker) {
 }
 
 
+/***********************************************************************************************
+** Description: Before an attack and defense call, this function takes a pointer to a
+** Character, a constant reference to an integer for the fighter number (1 or 2), and a constant
+** reference to a boolean to indicate if the character is attacking or defending during this
+** encounter. It then outputs the necessary information on the character to the screen using
+** public methods in the object and depending on whether the character was attacking or
+** defending.
+***********************************************************************************************/
 void Game::displayType(Character *character, const int &characterNumber, const bool &isAttacker) {
 
   if (isAttacker) {
@@ -168,16 +202,28 @@ void Game::displayType(Character *character, const int &characterNumber, const b
 }
 
 
+/***********************************************************************************************
+** Description: Returns a pointer to a character representing the first fighter chosen.
+***********************************************************************************************/
 Character* Game::getFighter1() {
   return fighter1;
 }
 
 
+/***********************************************************************************************
+** Description: Returns a Character pointer for the second fighter chosen.
+***********************************************************************************************/
 Character* Game::getFighter2() {
   return fighter2;
 }
 
 
+/***********************************************************************************************
+** Description: Function that takes two integers representing the number of the decision order
+** from the menu prompt (selecting fighter 1 or fighter 2), followed by the menu choice of
+** character type. Memory is then allocated for the appropriate character and the pointer is
+** assigned to the correct fighter data member.
+***********************************************************************************************/
 void Game::setFighter(int fighter, int choice) {
   if (fighter == 1) {
 
