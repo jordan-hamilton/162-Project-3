@@ -17,9 +17,9 @@ class BlueMen : public Character {
       setNumAttackDieSides(10);
       setNumDefenseDice(3);
       setNumDefenseDieSides(6);
-      setCharacteristics("They are small, 6 inch tall, but fast and tough. They \
-        are hard to hit so they can take some damage. They can also do a LOT of \
-        of damage when they crawl inside enemies' armor or clothing.");
+      setCharacteristics("They are small, 6 inch tall, but fast and tough. \
+They are hard to hit so they can take some damage. They can also do a LOT of \
+damage when they crawl inside enemies' armor or clothing.");
       }
 
     int attack() override;

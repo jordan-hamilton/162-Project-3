@@ -18,7 +18,7 @@ class Medusa : public Character {
       setNumDefenseDice(1);
       setNumDefenseDieSides(6);
       setCharacteristics("Scrawny lady with snakes for hair which helps her \
-        during combat. Just don't look at her!");
+during combat. Just don't look at her!");
 }
 
 int attack() override;

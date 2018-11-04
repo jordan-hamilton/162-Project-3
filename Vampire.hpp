@@ -18,7 +18,7 @@ class Vampire : public Character {
       setNumDefenseDice(1);
       setNumDefenseDieSides(6);
       setCharacteristics("Suave, debonair, but vicious and surprisingly \
-        resilient");
+resilient");
   }
 
   int attack() override;
