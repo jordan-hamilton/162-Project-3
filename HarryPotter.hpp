@@ -18,6 +18,7 @@ class HarryPotter : public Character {
       setNumDefenseDice(2);
       setNumDefenseDieSides(6);
       setCharacteristics("Harry Potter is a wizard.");
+      setType("Harry Potter");
       setHasRevived(false);
     }
 

@@ -19,14 +19,15 @@ class Vampire : public Character {
       setNumDefenseDieSides(6);
       setCharacteristics("Suave, debonair, but vicious and surprisingly \
 resilient");
-  }
+      setType("Vampire");
+    }
 
   int attack() override;
   int defend(int hitPts) override;
 
 
   private:
-
+    bool charm();
 
 };
 

@@ -1,5 +1,9 @@
 #include "Character.hpp"
 
+
+/***********************************************************************************************
+** Description: A default constructor that initalizes data members.
+***********************************************************************************************/
 Character::Character() {
 
   attackPts = 0;
@@ -15,11 +19,11 @@ Character::Character() {
 }
 
 
-Character::~Character() {
-
-}
-
-
+/***********************************************************************************************
+** Description: A method that takes an integer representing the number of dice that should be
+** rolled, and the number of sides on the dice. The result of each roll is summed in a for loop
+** and then returned as an integer.
+***********************************************************************************************/
 int Character::rollDie(int numDice, int numSides) {
 
   int result = 0;
@@ -78,6 +82,11 @@ std::string Character::getCharacteristics() {
 }
 
 
+std::string Character::getType() {
+  return type;
+}
+
+
 void Character::setAttackPts(int attack) {
   attackPts = attack;
 }
@@ -120,4 +129,9 @@ void Character::setNumDefenseDieSides(int sides) {
 
 void Character::setCharacteristics(std::string description) {
   characteristics = description;
+}
+
+
+void Character::setType(std::string characterType) {
+  type = characterType;
 }

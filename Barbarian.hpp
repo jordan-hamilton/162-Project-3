@@ -19,6 +19,7 @@ class Barbarian : public Character {
       setNumDefenseDieSides(6);
       setCharacteristics("Think Conan or Hercules from the movies. Big sword, \
 big muscles, bare torso.");
+      setType("Barbarian");
     }
 
     int attack() override;

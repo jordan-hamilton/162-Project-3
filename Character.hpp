@@ -11,7 +11,7 @@ class Character {
 
   public:
   Character();
-  virtual ~Character();
+  virtual ~Character() {};
   ///TODO: Decide paramters for attack/defend
   virtual int attack() = 0;
   virtual int defend(int hitPts) = 0;
@@ -27,6 +27,8 @@ class Character {
   int getNumDefenseDice();
   int getNumDefenseDieSides();
   std::string getCharacteristics();
+  std::string getType();
+
   void setAttackPts(int attack);
   void setDefensePts(int defense);
   void setArmorPts(int armor);
@@ -36,15 +38,14 @@ class Character {
   void setNumDefenseDice(int dice);
   void setNumDefenseDieSides(int sides);
   void setCharacteristics(std::string description);
-
+  void setType(std::string characterType);
 
   private:
-
 
   protected:
     int attackPts, defensePts, armorPts, strengthPts, numAttackDice,
     numAttackSides, numDefenseDice, numDefenseSides;
-    std::string characteristics;
+    std::string characteristics, type;
 
 };
 

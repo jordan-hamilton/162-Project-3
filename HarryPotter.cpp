@@ -1,5 +1,10 @@
 #include "HarryPotter.hpp"
 
+
+/***********************************************************************************************
+** Description: An attack method that rolls the number of dice for this object, returns a random
+** number, and sets and returns the object's attack points as an integer.
+***********************************************************************************************/
 int HarryPotter::attack() {
 
   setAttackPts( rollDie(numAttackDice, numAttackSides) );
@@ -7,6 +12,7 @@ int HarryPotter::attack() {
   return getAttackPts();
 
 }
+
 
 int HarryPotter:: defend(int hitPts) {
 
@@ -28,6 +34,7 @@ int HarryPotter:: defend(int hitPts) {
 
 }
 
+
 //TODO: call this
 void HarryPotter::revive() {
 
@@ -35,6 +42,7 @@ void HarryPotter::revive() {
     setHasRevived(true);
 
 }
+
 
 bool HarryPotter::getHasRevived() {
   return hasRevived;

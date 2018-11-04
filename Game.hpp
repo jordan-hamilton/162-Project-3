@@ -17,17 +17,21 @@
 class Game {
 
   public:
-  Game();
-  Game(int character1, int character2);
-  ~Game();
-  void fight(Character* character1, Character* character2);
+    Game();
+    Game(int character1, int character2);
+    ~Game();
 
   private:
-  Character* fighter1 = nullptr;
-  Character* fighter2 = nullptr;
-  Character* getFighter1();
-  Character* getFighter2();
-  void setFighter(int fighter, int choice);
+    void fight(Character* character1, Character* character2);
+    Character* fighter1 = nullptr;
+    Character* fighter2 = nullptr;
+    int firstStrike();
+    void displayRoll(Character* character, const bool &isAttacker);
+    void displayType(Character* character, const int &characterNumber, const bool &isAttacker);
+    void displayDamage(Character* character, const int &characterNumber, const int &originalStrength);
+    Character* getFighter1();
+    Character* getFighter2();
+    void setFighter(int fighter, int choice);
 
 };
 
